@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The website that waves at you for no reason</title>
+    <style>
+        .container{
+            text-align: center;
+            font-family: helvetica, sans-serif;
+        }
+        #submit{
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            background-color: blue;
+            color: white;
+            transition: 0.25s;
+        }
+        #submit:hover{
+            background-color: rgb(0, 0, 133);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="welc">Hello,</h1>
+        <label>name:</label>
+        <input type="text" id="text"><br><br>
+        <button id="submit">submit</button>
+    </div>
+    <script>
+        const h1 = document.getElementById("welc");
+        const input = document.getElementById("text");
+        const submit = document.getElementById("submit")
+
+        submit.onclick = function(){
+            var name = input.value;
+            h1.textContent = `Hello, ${name}`
+        }
+    </script>
+</body>
+</html>
